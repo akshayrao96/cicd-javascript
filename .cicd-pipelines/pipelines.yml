@@ -6,7 +6,7 @@ global:
     docker:
         registry: 'dockerhub'
         image: "node:latest"
-    artifact_upload_path: "t4-cicd-cs6510"
+    artifact_upload_path: "cs6510-javascript"
 
 # default stages: [build, test, doc, deploy]
 stages: ['build', 'test', 'doc']
@@ -16,7 +16,7 @@ jobs:
     checkout:
         stage: build
         scripts:
-            - 'git clone https://github.com/sjchin88/cicd-javascript .'
+            - 'git clone https://github.com/akshayrao96/cicd-javascript .'
             - "git submodule init"
             - "git submodule update"
             - 'ls -la'
